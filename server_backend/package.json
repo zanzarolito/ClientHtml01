@@ -1,0 +1,14 @@
+{
+  "name": "server_backend",
+  "version": "0.0.1",
+  "description": "bonjour",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Anjara",
+  "license": "ISC",
+  "dependencies": {
+    "restify": "^8.5.1"
+  }
+}
