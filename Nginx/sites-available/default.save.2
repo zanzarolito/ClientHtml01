@@ -15,11 +15,7 @@
 ##
 
 # Default server configuration
-#
-
-server {
-
-	add_header 'Access-Control-Allow-Origin' '*' ; 
+l-Allow-Origin: http://10.10.187.9:8080/bonjour
 
 	listen 80 default_server;
 	listen [::]:80 default_server;
@@ -41,7 +37,7 @@ server {
 	# include snippets/snakeoil.conf;
 
 	#root /home/anjara/testnginx;
-	root /home/anjara/client_html_git/ClientHtml01/Client_page_web;
+	root /home/anjara/client_html_git/ClientHtml01/page_web;
 
 	# Add index.php to the list if you are using PHP
 	#index index.html index.htm index.nginx-debian.html;

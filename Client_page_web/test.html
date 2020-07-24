@@ -8,16 +8,25 @@
 
 
 		<img src="bonjour.jpeg"
-		 alt="bonjour" width="400">
+		  width="400">
 		 
 		 <p id = "demo"></p>
 
 		<h1 id = "title">Bonjour</h1>
-		<button type = "button" id = "bouton_bjr">Bonjour</button>
+		<button type = "button" id = "bouton_bjr">Bonjour dans la console</button>
 		
-		<a href = "http://10.10.187.9:8080/bonjour" >bonjour<a>
-
+		<script>
+			var body = document.querySelector('body');
+			var myA=document.createElement("a");
+			myA.innerHTML = "bonjour";
+			myA.setAttribute("href", window.location + 'bonjour');
+			body.appendChild(myA);
+		</script>
+		
 		<button type = "button" id = "bouton2">Bonjour info</button>
+		
+		<button type = "button" id = "bouton3">Hello World!</button>
+
 
 		<script src = "test.js"></script>
 		

@@ -42,5 +42,15 @@ var server = app.listen(8080, function(){
     console.log("l'application ecoute sur http://" + host + ": %s ",port);
 });
 
+function write(){
+	var myObject = new ActiveXObject("Scripting.FileSystemObject");
+	var otf = myObject.OpenTextFile("/etc/nginx/fichier.txt",8 ,true);
+	    otf.WriteLine('le serveur ecoute');
+	    otf.Close();
+}
+
+fs = require('fs');
+fs.appendFileSync("/var/log/traces_anjara/traces_extension_node.txt", 'Helloworld' + '\n');
+
 
 

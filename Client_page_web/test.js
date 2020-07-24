@@ -1,19 +1,23 @@
 var button = document.getElementById("bouton_bjr");
 var button2 = document.getElementById("bouton2");
-
+var button3 = document.getElementById("bouton3");
 var titre = document.getElementById("title");
 
-document.getElementById("demo").innerHTML = "Page hostname is " + window.location.hostname; 
+document.getElementById("demo").innerHTML = "Page hostname is " + window.location ; 
 
 button.addEventListener("click",function(){
     console.log("bonjour");
 });
 
+button3.addEventListener("click",function(){
+    window.location = window.location + 'hello'; 
+})
 button2.addEventListener("click",function(){
 
     async function _init(){
 
-        const obj = await fetch('http://10.10.187.9:8080/bonjour')
+        //const obj = await fetch(window.location.protocol +  '//' + window.location.hostname + '/bonjour')
+	const obj = await fetch(window.location + "bonjour")
         .then(response => response.json());
         const bjr = obj;
         console.log(bjr);
@@ -45,9 +49,6 @@ button2.addEventListener("click",function(){
     }
 
     _init();
-
-        
-    
 
 });
 
